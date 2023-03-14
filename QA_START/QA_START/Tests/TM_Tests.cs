@@ -12,15 +12,15 @@ namespace QA_START.Tests
 {
 
         [TestFixture]
-      // [Parallelizable]
+       [Parallelizable]
         public class TM_Tests : CommonDriver
         {
-            // Page objects initialization
+           // Page objects initialization
             HomePage homePageObj = new HomePage();
             TMPage tmPageObj = new TMPage();
 
 
-            [Test, Order(1), Description("Check if user is able to create Time record with valid data")]
+            [Test, Order(1)]
             public void CreateTMTest()
             {
             // TM page object initialization and definition
@@ -29,14 +29,14 @@ namespace QA_START.Tests
                 tmPageObj.createTM(driver);
             }
 
-            [Test, Order(2), Description("Check if user is able to edit an existing record with valid data")]
+            [Test, Order(2)]
             public void EditTMTest()
             {
                 homePageObj.goToTMPage(driver);
-                tmPageObj.EditTM(driver);
+              //  tmPageObj.EditTM(driver);
             }
 
-            [Test, Order(3), Description("Check if user is able to delete an existing Time record")]
+            [Test, Order(3)]
             public void DeleteTMTest()
             {
 

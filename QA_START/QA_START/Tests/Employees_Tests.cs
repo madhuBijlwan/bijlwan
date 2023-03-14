@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+﻿using NUnit.Framework; 
 using OpenQA.Selenium;
 using QA_START.Pages;
 using QA_START.Utilities;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace QA_START.Tests
 {
     [TestFixture]
-   // [Parallelizable]
+    [Parallelizable]
     public class Employees_Tests:CommonDriver
     {
         HomePage homePageObj = new HomePage();
