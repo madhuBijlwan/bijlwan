@@ -13,10 +13,10 @@ Scenario Outline: Edit existing time and material record with valid details
 	Given I logged into turnUp portal successfully
 	When  I navigate to time and material page
 	And  I update '<description>' on an existing time and material record
-	Then the record should have been updated '<Description>'
+	Then the record should have been updated '<description>'
 
 Examples: 
-| Description |
+| description |
 | Time        |
 | Material    |
 | EditedRecord |
