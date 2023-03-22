@@ -13,29 +13,26 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"//Assertion 1- status code check\r",
+							"//Assertion 1- Response Status Check\r",
 							"pm.test(\"Status code check\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"//Assertion 2- Response value check\r",
-							"\r",
-							"pm.test(\"key-value pair response check\", function () {\r",
+							"//Assertion 2- Key Value pair response check\r",
+							"pm.test(\"Check key value pair response\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"   \r",
-							"   //name check\r",
+							"    // Name Check\r",
 							"    pm.expect(jsonData.data.name).to.eql(\"Madhu\");\r",
 							"\r",
-							"    //salary check\r",
+							"    //Salary Check\r",
 							"    pm.expect(jsonData.data.salary).to.eql(\"24\");\r",
 							"\r",
-							"    //age check\r",
-							"    pm.expect(jsonData.data.age).to.eql(\"28\");\r",
+							"    // Age Check\r",
+							"    pm.expect(jsonData.data.age).to.eql(\"20\");\r",
+							"    \r",
 							"\r",
-							"    //Set an environment variable\r",
-							"\r",
-							"    pm.environment.set(\"employeeID\", jsonData.data.id); \r",
-							"});\r",
-							""
+							"//Set an environment variable\r",
+							"pm.environment.set(\"employeeID\", jsonData.data.id);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -46,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Madhu\",\r\n    \"salary\": \"24\",\r\n    \"age\": \"28\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Madhu\",\r\n    \"salary\": \"24\",\r\n    \"age\": \"20\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -77,21 +74,21 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"//Assertion 1 status check\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"//Assertion 1- Response Status Check\r",
+							"pm.test(\"Status code check\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"//Assertion 2- Key Value pair response check\r",
+							"pm.test(\"Check key value pair response\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    // Name Check\r",
+							"    pm.expect(jsonData.data.name).to.eql(\"kiran\");\r",
 							"\r",
-							"//Assertion 2. check response body\r",
-							"    pm.test(\"Key value pair check \", function () {\r",
-							"        var jsonData = pm.response.json();\r",
-							"        \r",
-							"        //name check\r",
-							"        pm.expect(jsonData.data.name).to.eql(\"kiran\");\r",
-							"        //salary check\r",
-							"        pm.expect(jsonData.data.salary).to.eql(\"24\");\r",
-							"        //age check\r",
-							"        pm.expect(jsonData.data.age).to.eql(\"20\");\r",
-							"    });\r",
+							"    //Salary Check\r",
+							"    pm.expect(jsonData.data.salary).to.eql(\"24\");\r",
+							"\r",
+							"    // Age Check\r",
+							"      pm.expect(jsonData.data.age).to.eql(\"20\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -140,7 +137,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"\r",
 							"//Assertion 2- key-value pair response check\r",
-							"    pm.test(\"Your test name\", function () {\r",
+							"    pm.test(\"Check key value pair in the response\", function () {\r",
 							"        var jsonData = pm.response.json();\r",
 							"        \r",
 							"        //status check\r",
